@@ -23,16 +23,11 @@ export default function Home() {
 
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="container px-6 py-10 mx-auto max-w-6xl">
-                We have recently moved to Vercel for our web-host, because of this we are writing a new privacy policy. Vercel privacy policy can be found{" "}
-                <a className="text-blue-600" href="https://vercel.com/legal/privacy-policy">
-                    here
-                </a>
-                . Until we have finished writing our new privacy policy, please contact us at mail@questcraft.org or at our Discord server{" "}
-                <a className="text-blue-600" href="https://discord.com/invite/zVkMXSY78D">
-                    here
-                </a>
-                .
+            <div className="flex justify-center mt-20"></div>
+            <div className="container px-6 py-10 mx-auto max-w-6xl -indent-5">
+                QCXR, Digital Genesis, and all partners and cooperators involved with the development and maintenance of QuestCraft do not obtain, upload, or in any form collect user data, anonymous or not, and in turn do not sell or otherwise distribute user data.
+
+                User data may be collected from external sources such as Microsoft, Mojang, and/or Meta, persistent with their respective products, and as such we request you individually review their privacy policies.
             </div>
         </body>
     );
