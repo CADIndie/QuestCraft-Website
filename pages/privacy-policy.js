@@ -26,6 +26,8 @@ export default function Home() {
             <div className="flex justify-center mt-20"></div>
             <div className="container px-6 py-10 mx-auto max-w-6xl -indent-5">
                 QuestCraft, QCXR, Digital Genesis, and all partners and cooperators involved with the development and maintenance of QuestCraft do not obtain, upload, or in any form collect user data, anonymous or not, and in turn do not sell or otherwise distribute user data.
+
+                This means that no data is collected from anyone playing or using QuestCraft in any form, and therefore no data can be requested. If you have any questions you can email us at legal@questcraft.org.
             </div>
         </body>
     );
