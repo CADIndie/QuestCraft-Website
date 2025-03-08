@@ -11,14 +11,14 @@ export default function Home() {
                 <meta property="og:locale" content="en_US" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="QuestCraft | Home" />
-                <meta property="og:description" content="QuestCraft, utilizing Vivecraft and Pojlib, a standalone port of Minecraft: Java Edition to Oculus Quest Headsets." />
+                <meta property="og:description" content="QuestCraft, utilizing Vivecraft and Pojlib, a standalone port of Minecraft: Java Edition to Meta Quest Headsets." />
                 <meta property="og:url" content="https://questcraft.org/" />
                 <meta property="og:site_name" content="QuestCraft" />
                 <link rel="canonical" href="https://questcraft.org/" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="twitter:url" content="https://questcraft.org/" />
                 <meta name="twitter:title" content="QuestCraft | Home" />
-                <meta name="twitter:description" content="QuestCraft, utilizing Vivecraft and Pojlib, a standalone port of Minecraft: Java Edition to Oculus Quest Headsets." />
+                <meta name="twitter:description" content="QuestCraft, utilizing Vivecraft and Pojlib, a standalone port of Minecraft: Java Edition to Meta Quest Headsets." />
                 <meta name="twitter:card" content="summary" />
 
                 <link rel="icon" href="/favicon.ico" />
@@ -26,7 +26,7 @@ export default function Home() {
             <div className="container px-6 py-10 mx-auto max-w-6xl text-center">
                 <div className="mx-auto">
                     <p className="text-5xl font-bold text-gray-800 dark:text-white md:text-5xl lg:text-5xl">Welcome to QuestCraft</p>
-                    <p className="mt-6 text-gray-500 text-base dark:text-gray-300">QuestCraft, utilizing Vivecraft and Pojlib, is a standalone port of Minecraft: Java Edition to Oculus Quest Headsets.</p>
+                    <p className="mt-6 text-gray-500 text-base dark:text-gray-300">QuestCraft, utilizing Vivecraft and Pojlib, is a standalone port of Minecraft: Java Edition to Meta Quest Headsets.</p>
                     <div className=" lg:space-x-2 sm:space-y-2 ">
                         <div className="relative invisible sd:invisible md:invisible lg:visible">
                             <img src="image/alexbutton.png" className="w-16 absolute left-64 top-5" />
