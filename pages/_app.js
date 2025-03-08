@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-//import all components from the components folder
+// File: pages/_app.js
+import '../styles/globals.css'
 import { Nav, Footer } from "../components";
 
 function MyApp({ Component, pageProps }) {
@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
             <Footer />
         </>
-    );
+    )
 }
 
-export default MyApp;
+export default MyApp

@@ -1,27 +1,42 @@
+// File: components/Nav.js
+import Link from "next/link"
+import DarkModeToggle from "./DarkModeToggle"
+
 export const Nav = () => (
-    <nav x-data="{ isOpen: false }" className="bg-white  dark:bg-gray-800">
+    <nav x-data="{ isOpen: false }" className="bg-white dark:bg-gray-800 shadow">
         <div className="container px-6 py-4 max-w-6xl mx-auto">
             <div className="lg:flex lg:items-center">
                 <div className="flex items-center justify-between">
                     <div>
-                        <a className="text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="/">
-                            QuestCraft
-                        </a>
+                        <Link href="/">
+                            <a className="text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
+                                QuestCraft
+                            </a>
+                        </Link>
                     </div>
                 </div>
 
-                <div className=" inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
+                <div className="inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
                     <div className="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
-                        <a href="https://sidequestvr.com/app/7150/" className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
+                        <a
+                            href="https://sidequestvr.com/app/7150/"
+                            className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"
+                        >
                             Get on SideQuest
                         </a>
-                        <a href="/support" className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
-                            Support
-                        </a>
+                        <Link href="/support">
+                            <a className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
+                                Support
+                            </a>
+                        </Link>
                     </div>
 
-                    <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
-                        <a href="https://discord.com/invite/zVkMXSY78D" className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Discord">
+                    <div className="flex items-center justify-center mt-6 lg:mt-0 lg:-mx-2">
+                        <a
+                            href="https://discord.com/invite/zVkMXSY78D"
+                            className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Discord"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                                 <path fill="none" d="M0 0h24v24H0z" />
                                 <path
@@ -31,7 +46,11 @@ export const Nav = () => (
                             </svg>
                         </a>
 
-                        <a href="https://github.com/QuestCraftPlusPlus/QuestCraft/" className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Github">
+                        <a
+                            href="https://github.com/QuestCraftPlusPlus/QuestCraft/"
+                            className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Github"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                                 <path fill="none" d="M0 0h24v24H0z" />
                                 <path
@@ -41,22 +60,36 @@ export const Nav = () => (
                             </svg>
                         </a>
 
-                        <a href='https://patreon.com/questcraftxr' className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label='Patreon'>
+                        <a
+                            href="https://patreon.com/questcraftxr"
+                            className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            aria-label="Patreon"
+                        >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.7857 16.8055C18.7701 16.8055 22 13.5756 22 9.59124C22 5.6069 18.7701 2.37695 14.7857 2.37695C10.8014 2.37695 7.57143 5.6069 7.57143 9.59124C7.57143 13.5756 10.8014 16.8055 14.7857 16.8055Z" fill="currentcolor"/>
-                                <path d="M5.52622 2.37695H2V21.623H5.52622V2.37695Z" fill="currentcolor"/>
+                                <path
+                                    d="M14.7857 16.8055C18.7701 16.8055 22 13.5756 22 9.59124C22 5.6069 18.7701 2.37695 14.7857 2.37695C10.8014 2.37695 7.57143 5.6069 7.57143 9.59124C7.57143 13.5756 10.8014 16.8055 14.7857 16.8055Z"
+                                    fill="currentcolor"
+                                />
+                                <path d="M5.52622 2.37695H2V21.623H5.52622V2.37695Z" fill="currentcolor" />
                             </svg>
                         </a>
+
+                        <DarkModeToggle />
                     </div>
                 </div>
             </div>
             <div className="py-4">
                 <hr />
-                {/* absolute top right */}
                 <div className="relative w-30 h-30 invisible sd:invisible md:invisible lg:visible">
-                    <img className="absolute -top-4 -right-20 z-10 w-72 bg-transparent" src="/image/stevefalling.png" />
+                    <img
+                        className="absolute -top-4 -right-20 z-10 w-72 bg-transparent"
+                        src="/image/stevefalling.png"
+                        alt="Steve Falling"
+                    />
                 </div>
             </div>
         </div>
     </nav>
 );
+
+export default Nav;
