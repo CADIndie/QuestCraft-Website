@@ -22,7 +22,7 @@ export const Nav = () => (
                             href="https://sidequestvr.com/app/7150/"
                             className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"
                         >
-                            Get on SideQuest
+                            Get it on SideQuest
                         </a>
                         <Link href="/support">
                             <a className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
@@ -33,7 +33,7 @@ export const Nav = () => (
 
                     <div className="flex items-center justify-center mt-6 lg:mt-0 lg:-mx-2">
                         <a
-                            href="https://discord.com/invite/zVkMXSY78D"
+                            href="https://discord.gg/questcraft"
                             className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
                             aria-label="Discord"
                         >
