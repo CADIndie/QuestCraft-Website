@@ -18,6 +18,9 @@ export const Nav = () => (
                         <a href="/support" className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
                             Support
                         </a>
+                        <a href="/privacy-policy" className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
+                            Privacy Policy
+                        </a>
                     </div>
 
                     <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
@@ -43,8 +46,8 @@ export const Nav = () => (
 
                         <a href='https://patreon.com/questcraftxr' className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label='Patreon'>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.7857 16.8055C18.7701 16.8055 22 13.5756 22 9.59124C22 5.6069 18.7701 2.37695 14.7857 2.37695C10.8014 2.37695 7.57143 5.6069 7.57143 9.59124C7.57143 13.5756 10.8014 16.8055 14.7857 16.8055Z" fill="black"/>
-                                <path d="M5.52622 2.37695H2V21.623H5.52622V2.37695Z" fill="black"/>
+                                <path d="M14.7857 16.8055C18.7701 16.8055 22 13.5756 22 9.59124C22 5.6069 18.7701 2.37695 14.7857 2.37695C10.8014 2.37695 7.57143 5.6069 7.57143 9.59124C7.57143 13.5756 10.8014 16.8055 14.7857 16.8055Z" fill="currentcolor"/>
+                                <path d="M5.52622 2.37695H2V21.623H5.52622V2.37695Z" fill="currentcolor"/>
                             </svg>
                         </a>
                     </div>
