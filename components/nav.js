@@ -18,9 +18,6 @@ export const Nav = () => (
                         <a href="/support" className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
                             Support
                         </a>
-                        <a href="/privacy-policy" className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
-                            Privacy Policy
-                        </a>
                     </div>
 
                     <div className="flex justify-center mt-6 lg:flex lg:mt-0 lg:-mx-2">
