@@ -1,40 +1,66 @@
 // File: components/Nav.js
+import React, { useState } from "react"
 import Link from "next/link"
 import DarkModeToggle from "./DarkModeToggle"
 
-export const Nav = () => (
-    <nav x-data="{ isOpen: false }" className="bg-white dark:bg-gray-800 shadow">
-        <div className="container px-6 py-4 max-w-6xl mx-auto">
-            <div className="lg:flex lg:items-center">
-                <div className="flex items-center justify-between">
-                    <div>
-                        <Link href="/">
-                            <a className="text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
-                                QuestCraft
-                            </a>
-                        </Link>
-                    </div>
-                </div>
+export const Nav = () => {
+    const [isOpen, setIsOpen] = useState(false)
 
-                <div className="inset-x-0 z-20 flex-1 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between">
-                    <div className="flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
+    return (
+        <nav className="bg-white dark:bg-gray-800 shadow">
+            <div className="container px-6 py-4 max-w-6xl mx-auto">
+                <div className="lg:flex lg:items-center justify-between">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <Link href="/">
+                                <a className="text-2xl font-bold text-gray-800 transition-colors duration-300 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300">
+                                    QuestCraft
+                                </a>
+                            </Link>
+                        </div>
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="lg:hidden block text-gray-600 focus:outline-none"
+                            aria-label="Toggle navigation menu"
+                        >
+                            <div className="w-6 h-6 relative">
+                                <span
+                                    className={`block absolute h-0.5 w-6 bg-current transition duration-300 ease-in-out ${
+                                        isOpen ? "rotate-45 translate-y-[5px]" : "translate-y-0"
+                                    }`}
+                                />
+                                <span
+                                    className={`block absolute h-0.5 w-6 bg-current transition duration-300 ease-in-out ${
+                                        isOpen ? "opacity-0" : "translate-y-2.5"
+                                    }`}
+                                />
+                                <span
+                                    className={`block absolute h-0.5 w-6 bg-current transition duration-300 ease-in-out ${
+                                        isOpen ? "-rotate-45 translate-y-[5px]" : "translate-y-5"
+                                    }`}
+                                />
+                            </div>
+                        </button>
+                    </div>
+
+                    <div className="hidden lg:flex lg:items-center lg:space-x-8">
                         <a
                             href="https://sidequestvr.com/app/7150/"
-                            className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200"
+                            className="transition-colors duration-300 transform dark:text-white hover:text-gray-900 dark:hover:text-gray-200"
                         >
                             Get it on SideQuest
                         </a>
                         <Link href="/support">
-                            <a className="mt-2 transition-colors duration-300 transform lg:mt-0 lg:mx-4 hover:text-gray-900 dark:hover:text-gray-200">
+                            <a className="transition-colors duration-300 transform dark:text-white hover:text-gray-900 dark:hover:text-gray-200">
                                 Support
                             </a>
                         </Link>
                     </div>
 
-                    <div className="flex items-center justify-center mt-6 lg:mt-0 lg:-mx-2">
+                    <div className="flex items-center justify-center space-x-4 mt-4 lg:mt-0">
                         <a
                             href="https://discord.gg/questcraft"
-                            className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            className="text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
                             aria-label="Discord"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -48,7 +74,7 @@ export const Nav = () => (
 
                         <a
                             href="https://github.com/QuestCraftPlusPlus/QuestCraft/"
-                            className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            className="text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
                             aria-label="Github"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -62,7 +88,7 @@ export const Nav = () => (
 
                         <a
                             href="https://patreon.com/questcraftxr"
-                            className="mx-2 text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                            className="text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
                             aria-label="Patreon"
                         >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,19 +103,38 @@ export const Nav = () => (
                         <DarkModeToggle />
                     </div>
                 </div>
+                <div
+                    className={`lg:hidden mt-4 transition-all duration-300 overflow-hidden ${
+                        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                >
+                    <div className="flex flex-col space-y-4">
+                        <a
+                            href="https://sidequestvr.com/app/7150/"
+                            className="transition-colors duration-300 transform dark:text-white hover:text-gray-900 dark:hover:text-gray-200"
+                        >
+                            Get it on SideQuest
+                        </a>
+                        <Link href="/support">
+                            <a className="transition-colors duration-300 transform dark:text-white hover:text-gray-900 dark:hover:text-gray-200">
+                                Support
+                            </a>
+                        </Link>
+                    </div>
+                </div>
             </div>
-            <div className="py-4">
+            <div className="py-0">
                 <hr />
-                <div className="relative w-30 h-30 invisible sd:invisible md:invisible lg:visible">
+                <div className="relative w-30 h-0 invisible sd:invisible md:invisible lg:visible">
                     <img
-                        className="absolute -top-4 -right-20 z-10 w-72 bg-transparent"
+                        className="absolute -top-4 -right-0 z-10 w-72 bg-transparent"
                         src="/image/stevefalling.png"
                         alt="Steve Falling"
                     />
                 </div>
             </div>
-        </div>
-    </nav>
-);
+        </nav>
+    )
+}
 
-export default Nav;
+export default Nav
