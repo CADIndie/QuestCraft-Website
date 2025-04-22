@@ -73,7 +73,9 @@ export default function Home() {
                         for more details. Some of this Microsoft-collected information may be accessible to QCXR.
                     </p>
 
-                    <p> For any additional information, or to request deletion of any information we may collect, please contact us at privacy@questcraft.org.
+
+                            
+                    <p> For any additional information, or to request deletion of any information we may collect, please contact us at privacy@questcraft.org.</p>
                     <p>Privacy policy updated on April 22nd, 2025.</p>
                 </article>
             </main>
