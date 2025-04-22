@@ -72,7 +72,9 @@ export default function Home() {
                         device you are using. Please see Microsoft&apos;s Authentication and account privacy policies
                         for more details. Some of this Microsoft-collected information may be accessible to QCXR.
                     </p>
-                    <p>Privacy policy updated on February 22nd, 2025.</p>
+
+                    <p> For any additional information, or to request deletion of any information we may collect, please contact us at privacy@questcraft.org.
+                    <p>Privacy policy updated on April 22nd, 2025.</p>
                 </article>
             </main>
         </>
